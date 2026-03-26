@@ -209,6 +209,11 @@ body.jamk-body {
 img { max-width: 100%; display: block; }
 a { transition: 0.2s ease; }
 
+
+.btn-selected {
+  color: var(--jamk-pink) !important;
+  font-weight: 700 !important;
+}
 .utility-bar { background: #ececec; padding: 22px 0 20px; }
 .utility-inner { display: flex; justify-content: space-between; align-items: center; }
 .utility-link { display: inline-flex; align-items: center; gap: 4px; text-decoration: none; color: var(--jamk-text-dark); font-weight: 600; }
