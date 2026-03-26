@@ -277,7 +277,7 @@ a { transition: 0.2s ease; }
 
 .jamk-bg-soft-section, .jamk-light-section { background: #ececec; }
 .jamk-white-section { background: #fff; }
-/* .section-inner { padding: 72px auto; } */ */
+.jamk-white-section { padding: 72px 0; } 
 .events-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 54px; margin-bottom: 40px; }
 .event-card { color: #121225; }
 .event-date { display: inline-block; background: var(--jamk-pink); color: #fff; font-weight: 700; padding: 12px 20px; margin-bottom: 22px; font-size: 1rem; }
