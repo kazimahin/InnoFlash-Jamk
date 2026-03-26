@@ -14,12 +14,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="jamk-body">
+  <div id="mobileOverlay" class="mobile-overlay" onclick="toggleMobileMenu()"></div>
+
   <div class="utility-bar">
     <div class="container utility-inner">
       <div></div>
       <a href="#" class="utility-link"><span class="material-icons">play_arrow</span> Contacts</a>
     </div>
   </div>
+
 
   <header class="jamk-header site-home-header">
     <div class="container-fluid jamk-header-inner desktop-nav-header">
@@ -40,9 +43,36 @@
         <button class="icon-btn" aria-label="Search"><span class="material-icons">search</span></button>
         <button class="lang-btn" aria-label="Language">EN</button>
         <button class="icon-btn" aria-label="Favorites"><span class="material-icons">favorite_border</span></button>
-        <button class="icon-btn" aria-label="Menu"><span class="material-icons">menu</span></button>
+        <button class="icon-btn menu-toggle"aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobileMenu()"><span class="material-icons">menu</span></button>
       </div>
     </div>
+
+
+
+    <aside id="mobileMenu" class="mobile-side-panel" aria-hidden="true">
+      <div class="mobile-side-panel-header">
+        <div class="d-flex align-items-center gap-2">
+          <img src="images/logo.png" alt="Smart Onboarding logo" class="brand-logo">
+          <span class="mobile-panel-title">smart onboarding</span>
+        </div>
+    
+        <button class="icon-btn close-panel-btn" aria-label="Close menu" onclick="toggleMobileMenu()">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+    
+      <nav class="mobile-nav-links">
+        <a href="start-here.html">Progress</a>
+        <a href="before-arrival.html">Before Arrival</a>
+        <a href="during-orientation.html">Orientation</a>
+        <a href="after-orientation.html">After Orientation</a>
+        <a href="navigation.html">Navigation</a>
+        <a href="system-guide.html">Systems</a>
+        <a href="healthcare.html">Healthcare</a>
+      </nav>
+    </aside>
+    
+    
   </header>
 
   <main class="homepage-main">
@@ -127,30 +157,57 @@
         <a href="during-orientation.html" class="all-events-btn">All events</a>
       </div>
     </section>
-
     <section class="focus-section">
       <div class="container section-inner pt-0">
         <h2 class="focus-title">Smart Onboarding sections</h2>
-        <div class="card-grid three-col">
-          <a href="after-orientation.html" class="jamk-card text-decoration-none align-left">
+    
+        <div class="card-grid four-col">
+    
+          <a href="start-here.html" class="jamk-card text-decoration-none align-left">
+            <div class="card-icon"><span class="material-icons">task_alt</span></div>
+            <h3>Progress</h3>
+            <p>Track your onboarding progress including account setup, Moodle login, and key student tasks.</p>
+          </a>
+    
+          <a href="before-arrival.html" class="jamk-card text-decoration-none align-left">
+            <div class="card-icon"><span class="material-icons">flight_takeoff</span></div>
+            <h3>Before Arrival</h3>
+            <p>Prepare documents, housing, travel plans, and essential items before coming to Finland.</p>
+          </a>
+    
+          <a href="during-orientation.html" class="jamk-card text-decoration-none align-left">
             <div class="card-icon"><span class="material-icons">school</span></div>
+            <h3>Orientation</h3>
+            <p>Check schedules, watch sessions, and learn how to use JAMK systems during your first week.</p>
+          </a>
+    
+          <a href="after-orientation.html" class="jamk-card text-decoration-none align-left">
+            <div class="card-icon"><span class="material-icons">groups</span></div>
             <h3>After Orientation</h3>
-            <p>Study tips, student activities, support contacts, and settling into university life.</p>
+            <p>Explore student life, study tips, wellbeing services, and ongoing academic support.</p>
           </a>
-          <a href="healthcare.html" class="jamk-card text-decoration-none align-left">
-            <div class="card-icon"><span class="material-icons">health_and_safety</span></div>
-            <h3>Healthcare</h3>
-            <p>Simple YTHS guidance, urgent help, booking steps, and wellbeing support information.</p>
-          </a>
+    
           <a href="navigation.html" class="jamk-card text-decoration-none align-left">
             <div class="card-icon"><span class="material-icons">map</span></div>
             <h3>Navigation</h3>
-            <p>Campus map, indoor directions, bus info, and first-day arrival route planning.</p>
+            <p>Find campus buildings, indoor locations, and bus routes for easy movement.</p>
           </a>
+    
+          <a href="system-guide.html" class="jamk-card text-decoration-none align-left">
+            <div class="card-icon"><span class="material-icons">computer</span></div>
+            <h3>Systems</h3>
+            <p>Learn Moodle, Tuudo, email setup, and other essential university digital tools.</p>
+          </a>
+    
+          <a href="healthcare.html" class="jamk-card text-decoration-none align-left">
+            <div class="card-icon"><span class="material-icons">health_and_safety</span></div>
+            <h3>Healthcare</h3>
+            <p>Understand YTHS, booking appointments, emergency contacts, and student wellbeing.</p>
+          </a>
+    
         </div>
       </div>
     </section>
-
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="back-top-wrap">
@@ -189,6 +246,8 @@
           <div class="eudres-mark">EUDRES²</div>
         </div>
       </div>
+      <script src="./script/script.js"></script>
+
     </footer>
   </main>
 </body>

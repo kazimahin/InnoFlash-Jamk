@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="jamk-body">
-
+    <div id="mobileOverlay" class="mobile-overlay" onclick="toggleMobileMenu()"></div>
    
   <header class="jamk-header site-home-header">
     <div class="utility-bar">
@@ -41,7 +41,7 @@
         <button class="icon-btn" aria-label="Search"><span class="material-icons">search</span></button>
         <button class="lang-btn" aria-label="Language">EN</button>
         <button class="icon-btn" aria-label="Favorites"><span class="material-icons">favorite_border</span></button>
-        <button class="icon-btn" aria-label="Menu"><span class="material-icons">menu</span></button>
+        <button class="icon-btn menu-toggle"aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobileMenu()"><span class="material-icons">menu</span></button>
       </div>
     </div>
     <section class="page-hero dark-page-hero">
@@ -64,6 +64,8 @@
                   <a style="color: var(--jamk-pink);" href="start-here.html">Progress</a>
                   <a href="before-arrival.html">Before Arrival</a>
                   <a href="during-orientation.html">Orientation</a>
+                  <a href="after-orientation.html">After Orientation</a>
+                  <a href="navigation.html">Navigation</a>
                   <a href="system-guide.html">Systems</a>
                   <a href="healthcare.html">Healthcare</a>
                 </nav>
@@ -73,6 +75,30 @@
   
           </div>
       </section>
+      
+    <aside id="mobileMenu" class="mobile-side-panel" aria-hidden="true">
+        <div class="mobile-side-panel-header">
+          <div class="d-flex align-items-center gap-2">
+            <img src="images/logo.png" alt="Smart Onboarding logo" class="brand-logo">
+            <span class="mobile-panel-title">smart onboarding</span>
+          </div>
+      
+          <button class="icon-btn close-panel-btn" aria-label="Close menu" onclick="toggleMobileMenu()">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+      
+        <nav class="mobile-nav-links">
+          <a href="start-here.html">Progress</a>
+          <a href="before-arrival.html">Before Arrival</a>
+          <a href="during-orientation.html">Orientation</a>
+          <a href="after-orientation.html">After Orientation</a>
+          <a href="navigation.html">Navigation</a>
+          <a href="system-guide.html">Systems</a>
+          <a href="healthcare.html">Healthcare</a>
+        </nav>
+      </aside>
+      
   </header>
  
 
@@ -164,6 +190,47 @@
         </div>
       </div>
     </section>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="back-top-wrap">
+            <a href="#" class="back-top-btn">Back to top <span class="material-icons">north</span></a>
+          </div>
+  
+          <div class="footer-links-grid">
+            <div>
+              <h3>Contact</h3>
+              <a href="#">Contacts</a>
+              <a href="#">Invoicing addresses</a>
+            </div>
+            <div>
+              <h3>Site information</h3>
+              <a href="#">Cookie settings</a>
+              <a href="#">Privacy statements</a>
+              <a href="#">Accessibility statement</a>
+              <a href="#">Data protection in Jamk</a>
+              <a href="#">Takedown request</a>
+            </div>
+            <div>
+              <h3>Elsewhere in Jamk</h3>
+              <a href="#">Jamk Arena</a>
+              <a href="#">Open learning materials</a>
+              <a href="#">Help</a>
+              <a href="#">Jamk Journals</a>
+            </div>
+          </div>
+  
+          <div class="footer-bottom">
+            <div>
+              <p>PO Box 207 | 40101 Jyväskylä</p>
+              <p>tel. +358 20 743 8100</p>
+              <p>fax +358 14 449 9694</p>
+            </div>
+            <div class="eudres-mark">EUDRES²</div>
+          </div>
+        </div>
+        <script src="./script/script.js"></script>
+  
+      </footer>
   </main>
 </body>
 </html>
