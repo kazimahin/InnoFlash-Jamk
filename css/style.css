@@ -210,6 +210,14 @@ img { max-width: 100%; display: block; }
 a { transition: 0.2s ease; }
 
 
+.mobile-side-panel-header a  {
+  color: var(--jamk-white);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
 .btn-selected {
   color: var(--jamk-pink) !important;
   font-weight: 700 !important;
