@@ -454,6 +454,9 @@ a { transition: 0.2s ease; }
   .four-col {
     grid-template-columns: repeat(2, 1fr);
   }
+  .commentInput{
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 576px) {
